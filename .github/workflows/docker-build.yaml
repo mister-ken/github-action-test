@@ -21,7 +21,6 @@ jobs:
     - name: Build and push Landing Page Docker image
       uses: docker/build-push-action@v7
       with:
-        context: "/vault-sdk/k8s-auth/"
         file: ./Dockerfile
         push: false
         tags: latest
