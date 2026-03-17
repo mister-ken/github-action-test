@@ -1,0 +1,32 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    name: Build docker images
+    runs-on: self-hosted
+
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v4
+    - name: get pwd
+      id: print_pwd
+      run: pwd
+    - name: look at p8s-auth dir
+      id: look_dir
+      run: ls -la vault-sdk/k8s-auth/
+    - name: Build and push Landing Page Docker image
+      uses: docker/build-push-action@v7
+      with:
+        context: "/vault-sdk/k8s-auth/"
+        file: ./Dockerfile
+        push: false
+        tags: latest
+      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        
