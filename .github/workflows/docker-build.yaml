@@ -28,7 +28,7 @@ jobs:
       uses: docker/build-push-action@v7
       with:
         file: ./Dockerfile
-        push: false
+        push: true
         tags: latest
       # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
         
