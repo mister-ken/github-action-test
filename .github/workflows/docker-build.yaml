@@ -18,9 +18,6 @@ jobs:
     - name: get pwd
       id: print_pwd
       run: pwd
-    - name: look at p8s-auth dir
-      id: look_dir
-      run: ls -la vault-sdk/k8s-auth/
     - name: Build and push Landing Page Docker image
       uses: docker/build-push-action@v7
       with:
