@@ -10,7 +10,8 @@ env:
 #   DOCKER_BUILDKIT: 1
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  REPOSITORY: ${{ github.repository }}
+  IMAGE_NAME: k8s-vault-client
 
 jobs:
 
@@ -41,7 +42,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: ${{ env.REGISTRY }}/${{ github.repository }}/${{ env.IMAGE_NAME }}
+        images: ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
 
     - name: Build and push Landing Page Docker image
       uses: docker/build-push-action@v7
