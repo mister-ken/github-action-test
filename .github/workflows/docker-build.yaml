@@ -42,7 +42,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: ${{ env.IMAGE_NAME }}
+        images: ${{ env.REPOSITORY }}
 
     - name: Build and push Landing Page Docker image
       uses: docker/build-push-action@v7
