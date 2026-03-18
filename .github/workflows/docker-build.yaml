@@ -27,7 +27,7 @@ jobs:
         file: ./Dockerfile
       #   project: github-action-test
         push: true
-        token: ${{ secrets.GH_TOKEN_PACKAGES }}
+        github-token: ${{ secrets.GH_TOKEN_PACKAGES }}
         tags: ghcr.io/mister-ken/github-action-test/vault-k8s-client:latest
       # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
         
