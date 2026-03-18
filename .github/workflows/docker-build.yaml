@@ -51,7 +51,7 @@ jobs:
       #   project: github-action-test
         context: .
         push: true
-      #   github-token: ${{ secrets.GH_TOKEN_PACKAGES }}
+        github-token: ${{ secrets.GH_TOKEN_PACKAGES }}
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
 
