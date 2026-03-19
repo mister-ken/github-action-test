@@ -38,3 +38,4 @@ out/
 nohup.out
 env/
 actions-runner/**
+token
