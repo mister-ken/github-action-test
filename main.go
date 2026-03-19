@@ -23,6 +23,7 @@ func main() {
 		log.Printf("unable to initialize Vault client: %v", err)
 		os.Exit(1)
 	}
+
 	// determine where the application is running and set the
 	// Vault address and token accordingly
 	if _, exists := os.LookupEnv("KUBERNETES_SERVICE_HOST"); exists {
