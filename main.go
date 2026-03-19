@@ -17,6 +17,7 @@ import (
 func main() {
 	config := vault.DefaultConfig()
 	token_location := "token"
+
 	// initialize Vault client
 	client, err := vault.NewClient(config)
 	if err != nil {
